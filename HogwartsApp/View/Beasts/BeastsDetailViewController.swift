@@ -10,6 +10,7 @@ import UIKit
 class BeastsDetailViewController: UIViewController {
 
     @IBOutlet weak var viewMain: GradientView!
+    @IBOutlet weak var beastNameLabel: UILabel!
     @IBOutlet weak var beastImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var favoriteButton: ButtonGradient!
@@ -28,7 +29,7 @@ class BeastsDetailViewController: UIViewController {
     func setup(value: Beasts) {
         self.beastImageView?.image = UIImage(named: value.avatar ?? "")
         self.descriptionLabel?.text = " Nome: \(value.name ?? "") \n Característias: \(value.characteristics ?? "")"
-        title = value.name
+        self.beastNameLabel.text = (value.name ?? "")
     }
     
 }

@@ -22,7 +22,6 @@ class CharactersViewController: UIViewController {
         self.charactersTableView.delegate = self
         self.charactersTableView.dataSource = self
         
-        title = "Personagens"
         
         self.controller.getPersonagem { result in
             if result {
@@ -36,6 +35,7 @@ class CharactersViewController: UIViewController {
     }
     
 }
+
 //MARK: - TableView properties
 
 extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
@@ -43,6 +43,7 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.controller.count()
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CharactersTableCell? = tableView.dequeueReusableCell(withIdentifier: "CharactersTableCell", for: indexPath) as? CharactersTableCell
@@ -52,12 +53,14 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Characters", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CharactersDetailViewController") as! CharactersDetailViewController
         vc.providesPresentationContextTransitionStyle = true
         vc.definesPresentationContext = true
-        navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true, completion: nil)
         vc.setup(value: self.controller.loadCurrentCharacter(indexPath: indexPath))
     }
 }

@@ -37,9 +37,9 @@ class CharactersDetailViewController: UIViewController {
     
     func setup(value: Character) {
         let varinha: String = value.wand.wood
-        title = value.name
-        self.descriptionLabel?.text = " Espécie: \(value.species) \n Gênero: \(value.gender)\n Data de nascimento: \(value.dateOfBirth) \n Casa: \(value.house)\n Ancestralidade: \(value.ancestry) \n Cor dos olhos: \(value.eyeColour) \n Cor dos cabelos: \(value.hairColour) \n Patrono: \(value.patronus) \n Varinha: \(varinha) \n Ator: \(value.actor)"
-        self.characterImage?.downloaded(from: value.image)
+        self.titleLabel.text = value.name
+        self.descriptionLabel.text = " Espécie: \(value.species) \n Gênero: \(value.gender)\n Data de nascimento: \(value.dateOfBirth) \n Casa: \(value.house) \n Ancestralidade: \(value.ancestry) \n Cor dos olhos: \(value.eyeColour) \n Cor dos cabelos: \(value.hairColour) \n Patrono: \(value.patronus) \n Varinha: \(varinha) \n Ator: \(value.actor)"
+        self.characterImage.downloaded(from: value.image)
     }
     
     private func loadImageView() {

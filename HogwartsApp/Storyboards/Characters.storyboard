@@ -108,11 +108,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UY-DU-Q6s">
+                                        <rect key="frame" x="20" y="67" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="qTu-5I-jAN" firstAttribute="leading" secondItem="bxR-z9-uv9" secondAttribute="leading" constant="20" id="3aD-d1-Q9u"/>
                                     <constraint firstAttribute="bottom" secondItem="qTu-5I-jAN" secondAttribute="bottom" constant="40" id="KHY-Im-b9V"/>
+                                    <constraint firstItem="RDW-4B-2su" firstAttribute="top" secondItem="9UY-DU-Q6s" secondAttribute="bottom" constant="22" id="KIU-s0-iSx"/>
+                                    <constraint firstAttribute="trailing" secondItem="9UY-DU-Q6s" secondAttribute="trailing" constant="20" id="O1Z-2b-Qni"/>
+                                    <constraint firstItem="9UY-DU-Q6s" firstAttribute="leading" secondItem="bxR-z9-uv9" secondAttribute="leading" constant="20" id="TRZ-Rl-uyQ"/>
                                     <constraint firstAttribute="trailing" secondItem="RDW-4B-2su" secondAttribute="trailing" constant="20" id="UYP-H0-3Md"/>
                                     <constraint firstItem="qTu-5I-jAN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hAT-E5-Yam" secondAttribute="bottom" constant="40" id="ZJh-Lk-PJC"/>
                                     <constraint firstItem="RDW-4B-2su" firstAttribute="top" secondItem="bxR-z9-uv9" secondAttribute="top" constant="110" id="aOT-2z-uU8"/>
@@ -121,6 +130,7 @@
                                     <constraint firstAttribute="trailing" secondItem="hAT-E5-Yam" secondAttribute="trailing" constant="20" id="mZc-uE-dJA"/>
                                     <constraint firstAttribute="trailing" secondItem="qTu-5I-jAN" secondAttribute="trailing" constant="20" id="oWb-Gk-l5n"/>
                                     <constraint firstItem="RDW-4B-2su" firstAttribute="leading" secondItem="bxR-z9-uv9" secondAttribute="leading" constant="20" id="qNW-Qu-OTt"/>
+                                    <constraint firstItem="9UY-DU-Q6s" firstAttribute="top" secondItem="bxR-z9-uv9" secondAttribute="top" constant="67" id="z65-Sm-AXi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -145,6 +155,7 @@
                         <outlet property="characterImage" destination="RDW-4B-2su" id="zzH-XC-AOA"/>
                         <outlet property="descriptionLabel" destination="hAT-E5-Yam" id="eFs-8G-xzY"/>
                         <outlet property="saveFavoriteButton" destination="qTu-5I-jAN" id="O1M-zM-X3t"/>
+                        <outlet property="titleLabel" destination="9UY-DU-Q6s" id="3hW-Um-qb9"/>
                         <outlet property="viewMain" destination="bxR-z9-uv9" id="Gi0-fC-DdW"/>
                     </connections>
                 </viewController>

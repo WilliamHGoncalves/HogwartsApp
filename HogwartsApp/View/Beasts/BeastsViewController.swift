@@ -43,6 +43,7 @@ extension BeastsViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell ?? UITableViewCell()
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Beasts", bundle: nil)
@@ -50,7 +51,9 @@ extension BeastsViewController: UITableViewDelegate, UITableViewDataSource {
         BeastsDetailViewController
         vc.providesPresentationContextTransitionStyle = true
         vc.definesPresentationContext = true
-        navigationController?.pushViewController(vc, animated: true)
+//      navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true, completion: nil)
         vc.setup(value: self.controller.loadCurrentBeast(indexPath: indexPath))
     }
 }

@@ -108,16 +108,26 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYW-Ud-TTk">
+                                        <rect key="frame" x="22" y="72" width="370" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="ZYW-Ud-TTk" firstAttribute="leading" secondItem="NLg-xX-Fn1" secondAttribute="leading" constant="22" id="5Tv-i9-gkM"/>
                                     <constraint firstItem="iif-3u-w1T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F23-uT-Rzr" secondAttribute="bottom" constant="40" id="8ga-TG-cdq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZYW-Ud-TTk" secondAttribute="trailing" constant="22" id="A1l-F6-kxY"/>
                                     <constraint firstAttribute="trailing" secondItem="3Ye-HG-s8c" secondAttribute="trailing" constant="20" id="Ab3-sb-vKO"/>
                                     <constraint firstAttribute="trailing" secondItem="F23-uT-Rzr" secondAttribute="trailing" constant="20" id="HWS-Oq-oNn"/>
+                                    <constraint firstItem="3Ye-HG-s8c" firstAttribute="top" secondItem="ZYW-Ud-TTk" secondAttribute="bottom" constant="17" id="Mvo-ed-uBk"/>
                                     <constraint firstItem="F23-uT-Rzr" firstAttribute="leading" secondItem="NLg-xX-Fn1" secondAttribute="leading" constant="20" id="TyO-VK-LtB"/>
                                     <constraint firstItem="3Ye-HG-s8c" firstAttribute="top" secondItem="NLg-xX-Fn1" secondAttribute="top" constant="110" id="YeS-FV-Tbs"/>
                                     <constraint firstItem="F23-uT-Rzr" firstAttribute="top" secondItem="3Ye-HG-s8c" secondAttribute="bottom" constant="30" id="fP5-F2-Da9"/>
                                     <constraint firstItem="3Ye-HG-s8c" firstAttribute="leading" secondItem="NLg-xX-Fn1" secondAttribute="leading" constant="20" id="fn4-Qi-VgQ"/>
+                                    <constraint firstItem="ZYW-Ud-TTk" firstAttribute="top" secondItem="NLg-xX-Fn1" secondAttribute="top" constant="72" id="gfe-W3-zhK"/>
                                     <constraint firstAttribute="trailing" secondItem="iif-3u-w1T" secondAttribute="trailing" constant="20" id="h6U-Z2-HqR"/>
                                     <constraint firstAttribute="bottom" secondItem="iif-3u-w1T" secondAttribute="bottom" constant="40" id="lBM-nR-Zv4"/>
                                     <constraint firstItem="iif-3u-w1T" firstAttribute="leading" secondItem="NLg-xX-Fn1" secondAttribute="leading" constant="20" id="v2R-tw-cfa"/>
@@ -143,6 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="beastImageView" destination="3Ye-HG-s8c" id="7fW-ve-hch"/>
+                        <outlet property="beastNameLabel" destination="ZYW-Ud-TTk" id="0n2-Xp-Ids"/>
                         <outlet property="descriptionLabel" destination="F23-uT-Rzr" id="IOX-tR-4CF"/>
                         <outlet property="favoriteButton" destination="iif-3u-w1T" id="S5y-iG-KNx"/>
                         <outlet property="viewMain" destination="NLg-xX-Fn1" id="US6-eM-zxB"/>
