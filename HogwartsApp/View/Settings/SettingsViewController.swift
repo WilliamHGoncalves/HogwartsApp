@@ -33,7 +33,37 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func tappedChangeProfileImageButton(_ sender: UIButton) {
+        let Alert = UIAlertController(title: "Opções de seleção", message: "Selecione a opção", preferredStyle: .actionSheet)
+        let Gallery = UIAlertAction(title: "Imagem da Galeria", style: .default) {
+            UIAlertAction in
+            
+//            print("Galeria")
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = .photoLibrary
+            image.allowsEditing = true
+            self.present(image, animated: true)
+
+        }
+        let camera = UIAlertAction(title: "Tirar uma foto", style: .default) {
+            UIAlertAction in
+
+//            print("Camera")
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = .photoLibrary
+            image.allowsEditing = true
+            self.present(image, animated: true)
+            
+        }
         
+        let cancelar = UIAlertAction(title: "Cancelar", style: .destructive)
+        
+        Alert.addAction(Gallery)
+        Alert.addAction(camera)
+        Alert.addAction(cancelar)
+        
+        self.present(Alert, animated: true, completion: nil)
     }
     
     private func alertLogOut() {
@@ -66,7 +96,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return buttonName.count
     }
@@ -102,5 +132,28 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+//        var selectedImage: UIImage?
+        
+        if let editedImage = info[.editedImage] as? UIImage {
+//            selectedImage = editedImage
+            self.profileImageView.image = editedImage
+            picker.dismiss(animated: true)
+            
+        }else if let originalImage = info[.originalImage] as? UIImage{
+//            selectedImage = originalImage
+            self.profileImageView.image = originalImage
+            picker.dismiss(animated: true)
+            
+        }else {
+            print("Erro")
+        }
+        
+//        self.profileImageView.image = selectedImage
+    }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("Usuario cancelou o processo")
+    }
 }

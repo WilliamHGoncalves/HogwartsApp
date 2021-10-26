@@ -800,6 +800,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1Ou-EQ-wAN">
+            <size key="intrinsicContentSize" width="170" height="39"/>
+        </designable>
         <designable name="4j6-zZ-2PA">
             <size key="intrinsicContentSize" width="170" height="39"/>
         </designable>
