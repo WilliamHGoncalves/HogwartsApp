@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84FB676E273A237B00B7092A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB676D273A237B00B7092A /* UserData.swift */; };
 		97B99FD0786791312E71AAB8 /* Pods_HogwartsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5340B38549899452FC53C9F6 /* Pods_HogwartsApp.framework */; };
 		B4163A48271CAFD900B6C89E /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4163A47271CAFD900B6C89E /* CharactersViewController.swift */; };
 		B4163A4A271CAFE500B6C89E /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4163A49271CAFE500B6C89E /* CharactersDetailViewController.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		5340B38549899452FC53C9F6 /* Pods_HogwartsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HogwartsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED08F78980B5EDE063E7AEA /* Pods-HogwartsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HogwartsApp.debug.xcconfig"; path = "Target Support Files/Pods-HogwartsApp/Pods-HogwartsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		84FB676D273A237B00B7092A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B4163A47271CAFD900B6C89E /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		B4163A49271CAFE500B6C89E /* CharactersDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewController.swift; sourceTree = "<group>"; };
 		B4163A4B271CB02900B6C89E /* BeastsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeastsViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				B4EE2D3B2714A6C1003C8D61 /* Beasts.swift */,
 				B4EE2D3D2714A6E0003C8D61 /* Character.swift */,
+				84FB676D273A237B00B7092A /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				B43FE70C2724A38600FDE5FE /* QuizHelper.swift in Sources */,
 				B4EE2D562714A92E003C8D61 /* MyFavoritesViewController.swift in Sources */,
 				B4163A4A271CAFE500B6C89E /* CharactersDetailViewController.swift in Sources */,
+				84FB676E273A237B00B7092A /* UserData.swift in Sources */,
 				B4EE2D672714D9B2003C8D61 /* CharactersTableCell.swift in Sources */,
 				B4E4DD9F270D30E800C1347B /* ButtonGradient.swift in Sources */,
 				B4E4DD84270D25D500C1347B /* SceneDelegate.swift in Sources */,

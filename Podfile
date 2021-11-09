@@ -12,6 +12,8 @@ target 'HogwartsApp' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
+
   
   #Alamofire
   pod 'Alamofire', '~> 5.2'
